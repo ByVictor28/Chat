@@ -1,0 +1,31 @@
+$Desktop:1200px;
+$Laptop:992px;
+$Tablet:767px;
+$Mobile:480px;
+@mixin mqDesktop {
+    @media only screen and (max-width: 1200px) {
+        @content;
+    }   
+}
+@mixin mqLaptop {
+    @media only screen and (max-width: 992px) {
+        @content;
+    }
+}
+@mixin mqTablet {
+    @media only screen and (max-width: 767px) {
+        @content;
+    }
+}
+@mixin mqMobile {
+    @media only screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin flexCenter($dir,$jus,$alin) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jus;
+    align-items: $alin;
+}

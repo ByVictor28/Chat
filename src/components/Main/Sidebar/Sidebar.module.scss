@@ -1,0 +1,80 @@
+@import "../../../index.scss";
+@import "../../../App.scss";
+
+.Sidebar{
+   width: 300px;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+    .Header{
+        flex: 0 1 auto;
+        display: flex;
+        align-items: center;
+        padding: 1rem 2rem;
+        box-shadow: 0px 1px 5px black;
+        svg{
+            display: inline-block;
+            margin-right: 1rem;
+        }
+        h4{
+            display: inline-block;
+        }
+    }
+    .Content{
+        
+        flex: 1 1 auto;
+        padding: 1rem 3rem;
+
+        p{
+            color:$text_sub;
+        }
+    }
+    .Footer{
+        
+        flex: 0 1 auto;
+        padding: 1rem 2rem;
+        background: $color_sidebar_buttom;
+        position: relative;
+        @include flexCenter(row,space-between,center);
+        svg{
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        .Menu{
+            visibility:hidden;
+            background: $color_main;
+            position: absolute;
+            top: -9rem;
+            right: 0.5rem;
+            padding: 1rem;
+            border-radius: 1rem;
+            svg{
+                margin-right: 1rem;
+            }
+            a{
+                display: block;
+                color: white;
+                text-decoration: none;
+                margin: 0.5rem 0;
+                
+                padding: 0.5rem 1rem;
+                border-radius: 0.5rem;
+                &:hover{
+                        
+                    background: $color_search;
+                }
+                &:last-child{
+                    color: red;
+                }
+            }
+            .Divider{
+                width: 13rem;
+                height: 1px;
+                background: $text_sub;
+                margin: 2rem 0 1rem 0;
+            }
+            
+        }
+    }
+}

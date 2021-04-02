@@ -1,0 +1,23 @@
+@import "../../App.scss";
+@import "../../index.scss";
+
+.Container{
+    width: 100%;
+    height: 100vh;
+    @include flexCenter(row,center,center);
+    background: $color_main;
+
+}
+.Form{
+    text-align: end;
+}
+.Login{
+    width: 40rem;
+    padding: 2rem;
+    background: $color_sidebar;
+}
+@include mqTablet{
+    .Login{
+        width: 80%;
+    }
+}

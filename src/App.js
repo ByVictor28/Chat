@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import {useEffect} from "react";
+import Login from './components/Login/Login';
+import {Switch,Route} from "react-router-dom";
+import Main from './components/Main/Main';
+// import openSocket from "socket.io-client";
 
 function App() {
+
+  useEffect(() => {
+    // const socket = openSocket("http://localhost:3000");
+
+  }, [])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route path="/login">
+          <Login/>
+        </Route>
+        <Route path="/main">
+          <Main/>
+        </Route>
+      </Switch>
     </div>
   );
 }
