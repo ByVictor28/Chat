@@ -1,13 +1,14 @@
 import React from 'react'
-import { MdSend } from 'react-icons/md'
+import { MdMenu, MdSend } from 'react-icons/md'
 import Date from './DateMessage/Date'
 import Message from './Message/Message'
 import classes from "./Panel.module.scss"
 
-const Panel = ()=>{ 
+const Panel = ({click})=>{ 
 return (
     <div className={classes.Panel}>
         <div className={`${classes.Header}`}>
+            <MdMenu onClick={click}/>
             <h4>FRONTEND-DEVELOPERS</h4>
         </div>
         <div className={classes.Content}>

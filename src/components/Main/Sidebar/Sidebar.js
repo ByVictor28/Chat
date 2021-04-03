@@ -1,34 +1,33 @@
 import React,{useState} from 'react'
-import { MdArrowBack, MdExitToApp, MdFace, MdSettings } from 'react-icons/md'
+import { MdArrowBack, MdCancel, MdExitToApp, MdFace, MdSettings } from 'react-icons/md'
 import User from '../../UI/User/User'
+import Group from './Group/Group'
+import Inicio from './Inicio/Inicio'
 import classes from "./Sidebar.module.scss"
 
-const Sidebar = ()=>{ 
+const Sidebar = ({menuOpen,click})=>{ 
     const [visibilityMenu, setVisibilityMenu] = useState(false);
-
+    const [showMembers, setShowMembers] = useState(false);
+    
     const changeVisibility = () =>{
-        setVisibilityMenu(!visibilityMenu)
+        setVisibilityMenu(!visibilityMenu);
     }
 return (
-    <div className={classes.Sidebar}>
+    <div className={`${classes.Sidebar} ${menuOpen?classes.Open:""}`}>
+        <div className={classes.CloseMenu}>
+            <MdCancel size="2rem" onClick={click}/>
+        </div>
         <div className={`${classes.Header} sombra`}>
             <MdArrowBack/>
             <h4>All channels</h4>
         </div>
         <div className={classes.Content}>
-            <h4>FRONT-END DEVELOPERS</h4>
-            <p>
-                Pellentesque sagittis elit enim, 
-                Sit amet ultrices tellus accumsan 
-                quis, In gravida mollis purus, at 
-                interdum arcu tempor non 
-            </p>
-            <h4>MEMBERS</h4>
-            <User/>
-            <User/>
-            <User/>
-            <User/>
-            <User/>
+            {
+                !showMembers?
+                    <Inicio/>
+                :
+                    <Group/>
+            }
         </div>
         <div className={classes.Footer}>
             <User/>

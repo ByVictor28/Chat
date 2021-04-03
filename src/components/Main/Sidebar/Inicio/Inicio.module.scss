@@ -1,0 +1,15 @@
+
+@import "../../../../index.scss";
+
+.Search{
+    position: relative;
+
+    input{
+        padding-left:4rem !important;
+    }
+    svg{
+        position: absolute;
+        top: 2.4rem;
+        left: 1rem;
+    }
+}

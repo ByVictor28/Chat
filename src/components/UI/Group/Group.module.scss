@@ -1,0 +1,18 @@
+@import "../../../index.scss";
+
+.Group{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    img{
+        width: 4rem;
+        height: 4rem;
+        object-fit:cover;
+        object-position: center;
+        border-radius: 0.5rem;
+        margin-right:1rem ;
+    }
+    span{
+        color: $text_sub;
+    }   
+}
