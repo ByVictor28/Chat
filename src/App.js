@@ -20,6 +20,10 @@ function App() {
         <Route path="/main">
           <Main/>
         </Route>
+        <Route path="*">
+          <Login/>
+        </Route>
+        
       </Switch>
     </div>
   );

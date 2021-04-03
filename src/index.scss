@@ -48,9 +48,8 @@ input {
     color: $text;
     border: none;
     border-radius: 1rem;
-    // &:focus {
-    //   border: 3px solid #AFDDFB;
-    //   transition: 100ms linear;
-    // }
+    &:focus {
+      border: none;
+    }
   }
 }

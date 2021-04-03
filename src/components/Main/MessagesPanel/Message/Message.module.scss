@@ -1,0 +1,29 @@
+@import "../../../../index.scss";
+
+.Message{
+    display: flex;
+    margin: 1.5rem 0;
+    .Image{
+        margin-right: 2.4rem;
+        img{
+            border-radius: 1rem;
+            width: 4rem;
+            height: 4rem;
+            margin: 0 auto;
+            object-fit: cover;
+        }
+    }
+    .Data{
+        .Details{
+            color: $text_sub;
+            span{
+                &:first-child{
+                    margin-right: 3rem;
+                }
+                &:nth-child(2){
+                    font-size: 1.2rem;
+                }  
+            } 
+        }
+    }
+}

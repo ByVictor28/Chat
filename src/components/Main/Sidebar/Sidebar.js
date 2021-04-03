@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { MdArrowBack, MdExitToApp, MdFace, MdSettings, MdSettingsInputComposite } from 'react-icons/md'
+import { MdArrowBack, MdExitToApp, MdFace, MdSettings } from 'react-icons/md'
 import User from '../../UI/User/User'
 import classes from "./Sidebar.module.scss"
 
